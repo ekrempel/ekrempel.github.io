@@ -7,6 +7,6 @@ title: Contacting Erik Krempel
 
 The easiest way is via [email](mailto:spamrotate5@erikkrempel.net).
 
-For your convenience this is a real address and you don't have to solve a captcha here. For my convenience is it a temporary address which gets dumped once I receive to much spam over it. I will deliver a regular address after first contact.
+For your convenience this is a real address and you don't have to solve a captcha here. For my convenience is it a temporary address which gets dumped once I receive too much spam over it. I will deliver a regular address after first contact.
 
-Or when you are looking for business contact information check my [XING profile](https://www.xing.com/profile/Erik_Krempel).
+When you are looking for business contact information check my [XING profile](https://www.xing.com/profile/Erik_Krempel).
