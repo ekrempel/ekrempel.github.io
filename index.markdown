@@ -5,7 +5,7 @@ title: erikkrempel.net
 
 ##Welcome##
 
-This is the private website from Erik Krempel. I'm a computer science student at [Karlsruhe Institute of Technology](http://www.kit.edu) in Germany. Currently I'm a research assistant and writing my diploma thesis at [Fraunhofer IOSB](http://www.iosb.fraunhofer.de/servlet/is/11/) in the department for secure communication architecture (SKA).
+This is the private website from Erik Krempel. I studied computer science at [Karlsruhe Institute of Technology](http://www.kit.edu) in Germany. Currently I'm working as a researcher at [Fraunhofer IOSB](http://www.iosb.fraunhofer.de/servlet/is/11/) in the department for secure communication architecture (SKA).
 
 
 ##This Website##
