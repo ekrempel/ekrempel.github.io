@@ -1,0 +1,31 @@
+#nav li a:hover {
+	color: #00AAD4;
+	}
+
+#head h2 {
+	color: #699;
+	}
+
+
+h2 {
+	color: #00AAD4;
+	}	
+
+h3 {
+	color: #00AAD4;
+	}	
+	
+#content a, #content2 a, #foot a {
+	color: #00AAD4;
+	border-bottom: 1px dotted #00AAD4;
+	}
+	
+img.content, a img.content {
+	background-color: #00AAD4;
+	}
+	
+thead th {
+  color: #00AAD4;
+}
+
+
