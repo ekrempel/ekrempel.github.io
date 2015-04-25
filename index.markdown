@@ -21,6 +21,6 @@ You may think this quite useless as most webhosters already offer a wordpress or
 
 The generated static HTML is lightning fast and resource-efficient, because there is no need for a database or dynamic languages. Furthermore, I think that a lot of private websites don't deserve a full [LAMP](http://en.wikipedia.org/wiki/LAMP_%28software_bundle%29) setup to deploy some pictures of the cat. So I decided to create on of this rare old style websites.
 
-Additional you can host your website's markdown files directly at [GitHub](www.github.com) and you have git versioning of your entire website. To update my website I just have to push my changes and GitHub does all the work. 
+Additional you can host your website's markdown files directly at [GitHub](https://www.github.com) and you have git versioning of your entire website. To update my website I just have to push my changes and GitHub does all the work. 
 
-When you want to learn more about Jekyll visit their [website](https://github.com/jekyll/jekyll) or have a look at the documentation from [GitHub Pages](https://pages.github.com/)
+When you want to learn more about Jekyll visit their [website](https://github.com/jekyll/jekyll) or have a look at the documentation from [GitHub Pages](https://pages.github.com/) .
