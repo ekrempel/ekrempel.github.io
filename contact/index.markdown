@@ -5,7 +5,7 @@ title: Contacting Erik Krempel
 
 ##Contact##
 
-The easiest way is via [email](mailto:spamrotate5@erikkrempel.net).
+The easiest way is via [email](mailto:spamrotate6@erikkrempel.net).
 
 For your convenience this is a real address and you don't have to solve a captcha here. For my convenience is it a temporary address which gets dumped once I receive too much spam over it. I will deliver a regular address after first contact.
 
