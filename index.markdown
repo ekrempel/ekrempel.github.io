@@ -3,7 +3,8 @@ layout: default
 title: www.erikkrempel.net
 ---
 
-##Welcome##
+Welcome
+=======
 
 This is the private website from Erik Krempel.
 

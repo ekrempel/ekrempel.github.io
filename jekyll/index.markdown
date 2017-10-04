@@ -3,7 +3,8 @@ layout: default
 title: Jekyll
 ---
 
-##Jekyll##
+Jekyll
+======
 
 Jekyll is a Ruby-based static site generator.  You write your content in Markdown or HTML, deliver a layout and Jekyll generates static HTML. 
 
