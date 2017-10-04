@@ -4,8 +4,6 @@ title: www.erikkrempel.net
 ---
 
 ## Welcome
-### Welcome 1
-
 
 This is the private website from Erik Krempel.
 
