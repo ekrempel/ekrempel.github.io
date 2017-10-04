@@ -3,7 +3,8 @@ layout: default
 title: Contacting Erik Krempel
 ---
 
-##Contact##
+Contact
+=======
 
 The easiest way is via [email](mailto:spamrotate6@erikkrempel.net).
 
