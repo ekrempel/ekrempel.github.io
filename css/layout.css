@@ -78,7 +78,6 @@ body {
 	padding: 0;
 	width: 100%;
 	}
-	
 
 #content {
     float:left;
@@ -89,7 +88,7 @@ body {
 	
 
 h2 {
-	font: 400 1.2em "Helvetica Neue",helvetica,sans-serif;
+	font: 400 1.3em "Helvetica Neue",helvetica,sans-serif;
 	margin-left: 0px;
 	background-image: url(../images/rect.png);
 	background-position: center left;
@@ -101,17 +100,28 @@ h2 {
 	}
 	
 h3 {
-	font: 400 1em "Helvetica Neue",helvetica,sans-serif;
+	font: 400 1.2em "Helvetica Neue",helvetica,sans-serif;
 	color: #AAA;
 	}
 	
 p {
-	line-height: 1.8em;
-	margin: 10px 0 20px 0;
+	line-height: 1.5em;
+	margin: 10px 0 10px 0;
 	color: #696969;
-	font-size: 0.9em;
 	}
-	
+
+ol {
+	font: 400 1.0em "Helvetica Neue",helvetica,sans-serif;
+	color: #696969;
+	margin-left:10px;
+}
+
+ul {
+	font: 400 1.0em "Helvetica Neue",helvetica,sans-serif;
+	color: #696969;
+	margin-left:20px;
+}
+
 #content a, #content2 a, #foot a {
 	text-decoration: none;
 	}
@@ -295,6 +305,11 @@ div.post .credits img {
 
 div.post dl {
     margin-left:20px;
+}
+
+ol {
+	font: 400 1.0em "Helvetica Neue",helvetica,sans-serif;
+	margin-left:20px;
 }
 
 div.post {
