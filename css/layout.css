@@ -95,31 +95,35 @@ h2 {
 	background-repeat: no-repeat;
 	margin-top: -0.4.em;
 	padding-left: 8px;
+	padding-bottom: 8px;
 	padding-top: 0px;
-	letter-spacing: -0.5px;
 	}
 	
 h3 {
+	padding-top: 8px;
+	padding-bottom: 0px;
 	font: 400 1.2em "Helvetica Neue",helvetica,sans-serif;
 	color: #AAA;
 	}
 	
 p {
-	line-height: 1.5em;
-	margin: 10px 0 10px 0;
+	line-height: 1.3em;
+	margin: 0px 0 10px 0;
 	color: #696969;
 	}
 
 ol {
 	font: 400 1.0em "Helvetica Neue",helvetica,sans-serif;
 	color: #696969;
-	margin-left:10px;
+	margin-left:40px;
+	margin-bottom: 10px;
 }
 
 ul {
 	font: 400 1.0em "Helvetica Neue",helvetica,sans-serif;
 	color: #696969;
-	margin-left:20px;
+	margin-left:40px;
+	margin-bottom: 10px;
 }
 
 #content a, #content2 a, #foot a {
@@ -305,11 +309,6 @@ div.post .credits img {
 
 div.post dl {
     margin-left:20px;
-}
-
-ol {
-	font: 400 1.0em "Helvetica Neue",helvetica,sans-serif;
-	margin-left:20px;
 }
 
 div.post {
