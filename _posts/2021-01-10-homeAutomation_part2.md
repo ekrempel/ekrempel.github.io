@@ -26,6 +26,6 @@ After installation you should play around with openHAB and check out the [Tutori
 
 The first step is to install the [EnOcean](https://www.openhab.org/addons/bindings/enocean/) binding into your openHAB. After that add the USB 300 gateway as a Thing. In my case it was automatically detected once I plugged it into the Raspberry and rebooted it. I just had to click on the Inbox and accept the detected parameters. To test your installation you can try to read EnOcean communication. To do this go the Things, klick the "+" in the lower right corner and select the EnOcean Binding. In the new screen you should see your see your gateway listed and click on the button "Scan". While the scan is running press any of you EnOcean wall switches. The should be register a new Thing. You can see an example in the screenshot below.
 
-![EnOcean Autodiscover detecting wall switches](/images/openhab_enocean_discover.png)
+![EnOcean Autodiscover detecting wall switches](/images/openhab_enocean_discover.png){: width="600" }
 
 Unfortunately this technique does not work for actors like the FUD14 FSB14 or F4SR14-LED. They need a more complicated teach-in technique that I will describe in the next post.
