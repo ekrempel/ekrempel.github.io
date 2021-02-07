@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Home automation first steps with openHAB (Part 2)
+title: First steps with openHAB
 ---
 
 After accepting that the Wibutler will not be able to meet my requirements I started looking into different solutions. I had two main requirements. The new system must be able to control my existing [EnOcean](https://de.wikipedia.org/wiki/Enocean) devices and should have an active community so that the solution will be around for a long time. Additionally I looked for systems that are able to connect to a broad variety of components. 
@@ -16,7 +16,7 @@ My first goal was to be able to control the following devices:
 * [Eltako F4SR14-LED](https://www.elektroland24.de/smarthome/Eltako-Funk/Schalten-per-Funk-oxid-1/Funkaktoren-Schalten-REG/Eltako-F4SR14-LED-Funk-Schaltrelais-fuer-230V-LED-s-4-Kanaele.html) (Controls up to four lights)
 * [Eltako FUD14](https://www.elektroland24.de/smarthome/Eltako-Funk/Dimmen-per-Funk/Funkaktoren-Dimmen-REG/Eltako-FUD14-Universal-Dimmschalter-LED-ESL-bis-400W.html?listtype=search&searchparam=fud14&&order=&&order=#FUD14) (Dimmer for one light)
 
-To interact with Enocean devices you need a gateway. The most common type is the [USB 300](https://www.enocean.com/de/produkte/enocean_module/usb-300/) that works well with a Raspberry Pi. 
+To interact with EnOcean devices you need a gateway. The most common type is the [USB 300](https://www.enocean.com/de/produkte/enocean_module/usb-300/) that works well with a Raspberry Pi. 
 
 ### Basic installation and testing
 

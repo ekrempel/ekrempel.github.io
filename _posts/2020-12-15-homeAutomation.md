@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Home automation (Part 1)
+title: Home automation and the Wibutler
 ---
 
 So I started working on home automation. If you know me you will find this funny as I always wanted to stay clear of it. Not because I don't see the value, but because I assume that it is a huge time sink. Most components are not mature enough to allow me to built a system once an just use it in the future. So you will have to research, update, adapt and replace components all the time. Basically the only valid option is to make it a hobby so that it does not feel like a chore. To be fair, I am not quite sure if home automation is a hobby of mine, but I don't mind most of the time I have invested so far.
