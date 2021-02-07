@@ -22,10 +22,10 @@ To interact with EnOcean devices you need a gateway. The most common type is the
 
 Installation of openHAB on a Raspberry Pi is easy and well documented. I used the Raspberry Pi prepackaged SD card image as described here: <https://www.openhab.org/docs/installation/openhabian.html#raspberry-pi-prepackaged-sd-card-image>. I decided to work with the UI-driven configuration of openHAB. While many tutorials you find use the file-based configuration I found some sources that most development goes to UI-driven systems in the future. 
 
-After installation you should play around with openHAB and check out the [Tutorial](https://www.openhab.org/docs/tutorial/). Once you are a little bit familiar with the system and understand the difference between a Thing and a Item it is time to work on the EnOcean actors. 
+After installation you should play around with openHAB and check out the [Tutorial](https://www.openhab.org/docs/tutorial/). Once you are a little bit familiar with the system and understand the difference between a Thing and a Item it is time to work on the EnOcean actuators. 
 
 The first step is to install the [EnOcean Binding](https://www.openhab.org/addons/bindings/enocean/) into your openHAB. After that add the USB 300 gateway as a Thing. In my case it was automatically detected once I plugged it into the Raspberry and rebooted it. I just had to click on the Inbox and accept the detected parameters. To test your installation you can try to read EnOcean communication. To do this go the Things, klick the "+" in the lower right corner and select the EnOcean Binding. In the new screen you should see your see your gateway listed and click on the button "Scan". While the scan is running press any of you EnOcean wall switches. The should be register a new Thing. You can see an example in the screenshot below.
 
 ![EnOcean Autodiscover detecting wall switches](/images/openhab_enocean_discover.png){: width="600" }
 
-Unfortunately this technique does not work for actors like the FUD14 FSB14 or F4SR14-LED. They need a more complicated teach-in technique that I will describe in the next post.
+Unfortunately this technique does not work for actuators like the FUD14 FSB14 or F4SR14-LED. They need a more complicated teach-in technique that I will describe in the next post.
