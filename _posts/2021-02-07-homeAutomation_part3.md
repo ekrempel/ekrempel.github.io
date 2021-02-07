@@ -32,7 +32,7 @@ If this is not possible you will need to use the [PCT14 Software](https://www.el
 
 I try to give you an example so that you can find your EnOceanIds. So assume your system looks like this: F4SR14-LED, F4SR14-LED, FSB14, FUD14 and your baseId is: ffe2c000. The first F4SR14-LED has the EnOceanId ffe2c001 and uses four channels. The second F4SR14-LED has the EnOceanId ffe2c005 and uses four channels. The FSB14 has the EnOceanId ffe2c009 and uses two channels. *The second tricky part of EnOceanIds is, that they are written as Hexadecimal*. Therefore the EnOceanId of the FUD14 is ffe2c00B and not as you might assume ffe2c010.
 
-![EnOcean UI to configure a F4SR14-LED Thing](/images/openhab_enocean_switch.png){: width="600" }
+![EnOcean UI to configure a F4SR14-LED Thing](/images/openhab_enocean_teachin.png){: width="600" }
 
 Leave the Sender Id empty, as the Binding will select the correct Id by itself and create the Thing. After creating the Thing we will have to teach it to the actuator. Go to Settings -> Thing and select the newly created Thing. Switch to the Tab Channels and activate Show advanced. Here you will find the Channel "Teach In". 
 
