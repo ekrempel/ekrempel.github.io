@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Eltako actuators and openHAB
+title: Eltako F4SR14-LED actuator and openHAB
 ---
 
-In this blog post I will give you a short abstract how I managed to get my Eltako actuators working with [openHAB](https://www.openhab.org/). I do not aim to write a self-sufficient how-to for you but want to show some of the things I learned during my journey. It should go without saying that I am in no way responsible if the documented method does not work for you. Good sources for further reading are the [EnOcean part of the openHAB documentation](https://www.openhab.org/addons/bindings/enocean/) and the github page of the [EnOcean Binding](https://github.com/fruggy83/openocean). Another great source for the documentation of Eltako actuators is the [wiki of FHEM](https://wiki.fhem.de/wiki/EnOcean_Starter_Guide#UTE-Teach-In).
+In this blog post I will give you a short abstract how I managed to get my Eltako F4SR14-LED  actuators working with [openHAB](https://www.openhab.org/). I do not aim to write a self-sufficient how-to for you but want to show some of the things I learned during my journey. It should go without saying that I am in no way responsible if the documented method does not work for you. Good sources for further reading are the [EnOcean part of the openHAB documentation](https://www.openhab.org/addons/bindings/enocean/) and the github page of the [EnOcean Binding](https://github.com/fruggy83/openocean). Another great source for the documentation of Eltako actuators is the [wiki of FHEM](https://wiki.fhem.de/wiki/EnOcean_Starter_Guide#UTE-Teach-In).
 
 In the last post I already mentioned that working with Eltako actuators is more complicated that using the EnOcean autodiscover feature as they do not support the UTE teach-in. So what you have to do is the following:
 
@@ -54,4 +54,4 @@ Now we created the Thing and prepared a software button to trigger the teach-in 
 
 **Please note that the actuator will not accept any switches until you put it back into default!** Please remember to put the lower selector back to "AUTO" and the middle selector to "AUTO 1".
 
-You now should have created you first Thing and can test it. Go to Settings -> Things and select your newly created switch. Select the Tab Channels and select the Channel "Switch". Select it and press "Add Link to Item...". In this dialogue select "Create a new Item" and press "Link". 
+You now should have created you first Thing and can test it. Go to Settings -> Things and select your newly created switch. Select the Tab Channels and select the Channel "Switch". Select it and press "Add Link to Item...". In this dialogue select "Create a new Item" and press "Link". You should now be able to use this switch to control you lights.
