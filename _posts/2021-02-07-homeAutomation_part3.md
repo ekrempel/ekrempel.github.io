@@ -30,7 +30,7 @@ If this is not possible you will need to use the [PCT14 Software](https://www.el
 * Eltako F4SR14-LED -> 4 Channels
 * Eltako FUD14 -> 1 Channel
 
-I try to give you an example so that you can find your EnOceanIds. So assume your system looks like this: F4SR14-LED, F4SR14-LED, FSB14, FUD14 and your baseId is: ffe2c000. The first F4SR14-LED has the EnOceanId ffe2c001 and uses four channels. The second F4SR14-LED has the EnOceanId ffe2c005 and uses four channels. The FSB14 has the EnOceanId ffe2c009 and uses two channels. *The second tricky part of EnOceanIds is, that they are written as Hexadecimal*. Therefore the EnOceanId of the FUD14 is ffe2c00B and not as you might assume ffe2c010.
+I try to give you an example so that you can find your EnOceanIds. So assume your system looks like this: F4SR14-LED, F4SR14-LED, FSB14, FUD14 and your baseId is: ffe2c000. The first F4SR14-LED has the EnOceanId ffe2c001 and uses four channels. The second F4SR14-LED has the EnOceanId ffe2c005 and uses four channels. The FSB14 has the EnOceanId ffe2c009 and uses two channels. **The second tricky part of EnOceanIds is, that they are written as Hexadecimal**. Therefore the EnOceanId of the FUD14 is ffe2c00B and not as you might assume ffe2c010.
 
 Leave the Sender Id empty, as the Binding will select the correct Id by itself and create the Thing. 
 
@@ -41,8 +41,17 @@ Select it and press "Add Link to Item...". In this dialogue select "Create a new
 
 ![EnOcean UI to create a teach-in button](/images/openhab_enocean_teachin2.png){: width="600" }
 
-Now we created the Thing and prepared a software button to trigger the teach-in event. First we will have to prepare the F4SR14-LED actuator to teach a simple switch. You can find more information in the [official documentation](https://www.eltako.com/fileadmin/downloads/de/_bedienung/F4SR14-LED_30014076-1_dt.pdf). Use a small screwdriver to put you F4SR14-LED in the teach-in mode. Set the lower selector to the channel you want to configure. After that set the middle selector to "LRA". The LED of the actuator will blink rapidly. While it is blinking press the teach-in button we defined in the last step. The blinking of the actuator will stop and teach-in is finished. If not, press the teach-in button again. *The actuator will not accept any switches until you put it back into default!.* Please remember to put the lower selector back to "AUTO" and the middle selector to "AUTO 1".
+### Before we start with teach-in
+There are three important things you should be doing before going any further.
+
+1. Make photos of all you actuators
+2. Use the PCT14 software to make a backup of your EnOcean settings
+3. Make sure that nobody will accidentally press any of your EnOcean switches when you activated teach-in
+
+Now we created the Thing and prepared a software button to trigger the teach-in event. Next we will have to prepare the F4SR14-LED actuator to teach him a switch. You can find more information in the [official documentation](https://www.eltako.com/fileadmin/downloads/de/_bedienung/F4SR14-LED_30014076-1_dt.pdf). Use a small screwdriver to put you F4SR14-LED in the teach-in mode. Set the lower selector to the channel you want to configure. After that set the middle selector to "LRA". The LED of the actuator will blink rapidly. While it is blinking press the teach-in button we defined in the last step. The blinking of the actuator will stop and teach-in is finished. (Sometimes you have to press the teach-in button a second time until it is accepted, don't be alarmed.)
 
 ![Set the F4SR14-LED into teach-in](/images/F4SR14-LED.png){: width="200" }
+
+**Please note that the actuator will not accept any switches until you put it back into default!** Please remember to put the lower selector back to "AUTO" and the middle selector to "AUTO 1".
 
 You now should have created you first Thing and can test it. Go to Settings -> Things and select your newly created switch. Select the Tab Channels and select the Channel "Switch". Select it and press "Add Link to Item...". In this dialogue select "Create a new Item" and press "Link". 
