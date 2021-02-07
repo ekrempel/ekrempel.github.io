@@ -16,7 +16,10 @@
    id="svg12617"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="EnOcean_teachIn2.svg">
+   sodipodi:docname="EnOcean_teachIn2.svg"
+   inkscape:export-filename="C:\Projekte\ekrempel.github.io\images\openhab_enocean_teachin2.png"
+   inkscape:export-xdpi="119"
+   inkscape:export-ydpi="119">
   <defs
      id="defs12619" />
   <sodipodi:namedview
@@ -26,9 +29,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="1152.0714"
-     inkscape:cy="179.49998"
+     inkscape:zoom="0.7"
+     inkscape:cx="409.76515"
+     inkscape:cy="916.56415"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -3530,5 +3533,14 @@ rkJggg==
        preserveAspectRatio="none"
        height="1759"
        width="1917" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:4;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect8079"
+       width="1088.4952"
+       height="62.780949"
+       x="-667.03333"
+       y="-576.67114"
+       inkscape:export-xdpi="119"
+       inkscape:export-ydpi="119" />
   </g>
 </svg>
