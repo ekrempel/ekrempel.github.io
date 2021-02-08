@@ -19,7 +19,7 @@ This rather laborious process is not a fault of the Binding developers of openHA
 
 The easiest actuator to teach-in in my setup is the F4SR14-LED. It controls up to four different lights. To work with it we start by greating the correct Thing. Go to Settings -> Things and press the "+" in the lower right corner. Here select EnOcean Binding and Switching/Dimming Actuator. 
 
-![EnOcean UI to configure a F4SR14-LED Thing](/images/openhab_enocean_switch.png){: width="600" }
+![EnOcean UI to configure a F4SR14-LED Thing](/images/EnOcean_F4SR14_createThing.png){: width="600" }
 
 Make sure to select the EnOcean bridge you configured earlier. Unfortunately you have to provide openHAB with the EnOceanId of the device. There are at least two ways to find them. 
 
