@@ -60,9 +60,9 @@ You now should have created you first Thing and can test it. Go to Settings -> T
 
 Luckily the FUD14 is pretty similar to the F4SR14-LED. Let us start by defining a Thing for the FUD14. Go to Settings -> Things and press the "+" in the lower right corner. Here select EnOcean Binding and Switching/Dimming Actuator. Make sure to select your Bridge and enter the EnOceanId. In the EEP for Sending Commands select "Gateway command - dimming (A5_38_08 sub command 0x02)" as described in the [Bindung documentation](https://www.openhab.org/addons/bindings/enocean/) of the FUD14. At he point EEP for Receiving States you must select "Message with dimming value (A5_38_08 sub command 0x02)" and create the Thing.
 
-![EnOcean UI to create a teach-in button](/images/enocean_FUD14_createThing.png){: width="600" }
+![EnOcean UI to create a teach-in button](/images/EnOcean_FUD14_createThing.png){: width="600" }
 
-After creating the Thing we continue to create a teach-in button as we did for the F4SR14-LED. After that we activate teach-in for the FUD14 as described in the {manual](https://www.eltako.com/fileadmin/downloads/de/_bedienung/FUD14_30014005-2_dt.pdf). Use a small screwdriver to put the topmost selector to "PCR" and the middle selector to "LRN". The led start blinking. While it is blinking press the teach-in button we defined in the last step. The blinking of the actuator will stop and teach-in is finished. (Sometimes you have to press the teach-in button a second time until it is accepted, don't be alarmed.)
+After creating the Thing we continue to create a teach-in button as we did for the F4SR14-LED. After that we activate teach-in for the FUD14 as described in the [manual](https://www.eltako.com/fileadmin/downloads/de/_bedienung/FUD14_30014005-2_dt.pdf). Use a small screwdriver to put the topmost selector to "PCR" and the middle selector to "LRN". The led start blinking. While it is blinking press the teach-in button we defined in the last step. The blinking of the actuator will stop and teach-in is finished. (Sometimes you have to press the teach-in button a second time until it is accepted, don't be alarmed.)
 
 ![Set the F4SR14-LED into teach-in](/images/FUD14.png){: width="200" }
 
