@@ -35,7 +35,7 @@ I try to give you an example so that you can find your EnOceanIds. So assume you
 Leave the Sender Id empty, as the Binding will select the correct Id by itself and create the Thing. 
 
 After creating the Thing we will have to teach it to the actuator. Go to Settings -> Thing and select the newly created Thing. Switch to the Tab Channels and activate Show advanced. Here you will find the Channel "Teach In". 
-![EnOcean UI to configure a F4SR14-LED Thing](/images/EnOcean_F4SR14_createThing){: width="600" }
+![EnOcean UI to configure a F4SR14-LED Thing](/images/openhab_enocean_teachin.png){: width="600" }
 
 Select it and press "Add Link to Item...". In this dialogue select "Create a new Item" and press "Link". 
 
