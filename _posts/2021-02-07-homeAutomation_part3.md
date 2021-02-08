@@ -66,4 +66,4 @@ After creating the Thing we continue to create a teach-in button as we did for t
 
 ![Set the F4SR14-LED into teach-in](/images/FUD14.png){: width="200" }
 
-Now you should be able to create an Item to test controlling your newly created Thing.
+**Please note that the actuator will not accept any switches until you put it back into default!** Please remember to put the topmost selector back to "AUTO" and the middle selector to your desired lowest dimming level (somewhere in the middle in my case). Now you should be able to create an Item to test controlling your newly created Thing.
