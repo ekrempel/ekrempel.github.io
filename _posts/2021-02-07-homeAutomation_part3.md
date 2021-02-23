@@ -3,7 +3,7 @@ layout: post
 title: Eltako actuators and openHAB
 ---
 
-In this blog post I will give you a short abstract how I managed to get my Eltako F4SR14-LED, FUD14 and FSB14 actuators working with [openHAB](https://www.openhab.org/). I do not aim to write a self-sufficient how-to for you but want to show some of the things I learned during my journey. It should go without saying that I am in no way responsible if the documented method does not work for you. Good sources for further reading are the [EnOcean part of the openHAB documentation](https://www.openhab.org/addons/bindings/enocean/) and the github page of the [EnOcean Binding](https://github.com/fruggy83/openocean). Another great source for the documentation of Eltako actuators is the [wiki of FHEM](https://wiki.fhem.de/wiki/EnOcean_Starter_Guide#UTE-Teach-In).
+In this blog post I will give you a short abstract how I managed to get my Eltako F4SR14-LED, FUD14 and FSB14 actuators working with [openHAB](https://www.openhab.org/). I do not aim to write a self-sufficient how-to for you, but want to show some of the things I learned during my journey. It should go without saying that I am in no way responsible if the documented method does not work for you. Good sources for further reading are the [EnOcean part of the openHAB documentation](https://www.openhab.org/addons/bindings/enocean/) and the github page of the [EnOcean Binding](https://github.com/fruggy83/openocean). Another great source for the documentation of Eltako actuators is the [wiki of FHEM](https://wiki.fhem.de/wiki/EnOcean_Starter_Guide#UTE-Teach-In).
 
 In the last post I already mentioned that working with Eltako actuators is more complicated that using the EnOcean autodiscover feature as they do not support the UTE teach-in. So what you have to do is the following:
 
@@ -13,7 +13,20 @@ In the last post I already mentioned that working with Eltako actuators is more 
 4. Trigger a teach-in via the UI
 5. Put your actuators back into default mode
 
-This rather laborious process is not a fault of the Binding developers of openHAB but to the limitation of the Eltako actuators. The only thing the openHAB developers could do is to present you with an teach-in button while creating a Thing to streamline the process a little. Maybe this will be integrated in the future when we see more usage of the UI-based configuration. But lets get started.
+This rather laborious process is not a fault of the Binding developers of openHAB but to the limitation of the Eltako actuators. The only thing the openHAB developers could do is to present you with an teach-in button while creating a Thing to streamline the process a little. Maybe this will be integrated in the future when we see more usage of the UI-based configuration. 
+
+### EnOceanIds
+Before we can get started you need to get an understanding of EnOceanIds. They are the unique identifiers of all the actuators in your system. In order to teach an actuator you need to provide openHAB with the EnOceanId of the device. There are at least two ways to find them. 
+
+If you are replacing/adding to the Wibutler as I was doing, you can see the EnOceanId in the Wibutler App. This is the easy way.
+ 
+If this is not possible you will need to use the [PCT14 Software](https://www.eltako.com/de/software/gfvs-software-pct14.html) and connect to your system to find the baseId. The first actuator will have the EnOceanId = baseId + 1. Here it gets a bit messy as different actuators have a different set of channels and every channel uses a Id.
+
+* Eltako FSB14 -> 2 Channels
+* Eltako F4SR14-LED -> 4 Channels
+* Eltako FUD14 -> 1 Channel
+
+I try to give you an example so that you can compute your EnOceanIds. Lets assume your system looks like this: F4SR14-LED, F4SR14-LED, FSB14, FUD14 and your baseId is: ffe2c000. The first F4SR14-LED has the EnOceanId ffe2c001 and uses four channels. The second F4SR14-LED has the EnOceanId ffe2c005 and uses four channels. The FSB14 has the EnOceanId ffe2c009 and uses two channels. **The second tricky part of EnOceanIds is, that they are written as Hexadecimal**. Therefore the EnOceanId of the FUD14 is ffe2c00b and not as you might assume ffe2c010. There is an excel file at the github page of the EnOcean Binding that can help you to compute your ids: (https://github.com/fruggy83/openocean/wiki/stuff/openhab2.xlsx). Once you know your Ids you can start programming them in.
 
 ###  [F4SR14-LED](ttps://www.elektroland24.de/smarthome/Eltako-Funk/Schalten-per-Funk-oxid-1/Funkaktoren-Schalten-REG/Eltako-F4SR14-LED-Funk-Schaltrelais-fuer-230V-LED-s-4-Kanaele.html)
 
@@ -21,18 +34,9 @@ The easiest actuator to teach-in in my setup is the F4SR14-LED. It controls up t
 
 ![EnOcean UI to configure a F4SR14-LED Thing](/images/EnOcean_F4SR14_createThing.png){: width="600" }
 
-Make sure to select the EnOcean bridge you configured earlier. Unfortunately you have to provide openHAB with the EnOceanId of the device. There are at least two ways to find them. 
+Make sure to select the EnOcean bridge you configured earlier. 
 
-If you are replacing/adding to the Wibutler as I was doing, you can see the EnOceanId in the Wibutler App. This is the easy way. 
-If this is not possible you will need to use the [PCT14 Software](https://www.eltako.com/de/software/gfvs-software-pct14.html) and connect to your system to find the baseId. The first actuator will have the EnOceanId = baseId + 1. Here it gets a bit messy as different actuators have a different set of channels and every channel uses a Id.
-
-* Eltako FSB14 -> 2 Channels
-* Eltako F4SR14-LED -> 4 Channels
-* Eltako FUD14 -> 1 Channel
-
-I try to give you an example so that you can find your EnOceanIds. So assume your system looks like this: F4SR14-LED, F4SR14-LED, FSB14, FUD14 and your baseId is: ffe2c000. The first F4SR14-LED has the EnOceanId ffe2c001 and uses four channels. The second F4SR14-LED has the EnOceanId ffe2c005 and uses four channels. The FSB14 has the EnOceanId ffe2c009 and uses two channels. **The second tricky part of EnOceanIds is, that they are written as Hexadecimal**. Therefore the EnOceanId of the FUD14 is ffe2c00b and not as you might assume ffe2c010.
-
-Leave the Sender Id empty, as the Binding will select the correct Id by itself and create the Thing. 
+Leave the Sender Id empty, as the Binding will select the correct Id by itself and create the Thing. Use the EnOceanId you have collected earlier.
 
 After creating the Thing we will have to teach it to the actuator. Go to Settings -> Thing and select the newly created Thing. Switch to the Tab Channels and activate Show advanced. Here you will find the Channel "Teach In". 
 ![EnOcean UI to configure a F4SR14-LED Thing](/images/openhab_enocean_teachin.png){: width="600" }
